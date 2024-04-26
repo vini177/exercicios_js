@@ -26,7 +26,7 @@ function updateFirst(event) {
   }
 }
 
-//Exercício 03
+// Exercício 03
 var i = 0
 function addOne() {
   document.getElementById("counter-txt").value = ++i
@@ -35,4 +35,48 @@ function addOne() {
 function resetCounter() {
   i = 0
   document.getElementById("counter-txt").value = i
+}
+
+// Exercício 04
+function changePic(fileName) {
+  let img = document.querySelector("#photo")
+  img.setAttribute("src", fileName)  
+}
+
+// Exercício 05
+function calc() {
+  let num1 = parseFloat(document.getElementById("v1").value)
+  let num2 = parseFloat(document.getElementById("v2").value)
+  let operation = document.getElementById("op").value
+  let res
+
+  switch (operation) {
+    case "sum":
+      res = num1 + num2
+      break
+    case "sub":
+      res = num1 - num2
+      break
+    case "multi":
+      res = num1 * num2
+      break
+    case "divi":
+      if(num2 !== 0) {
+        res = num1 / num2
+      } else {
+        res = "Erro: Divisão por zero"
+      }
+      break
+      default:
+        res = "Erro: Operação Inválida"
+  }
+
+  document.getElementById("result").value = res
+}
+
+function clear() {
+  document.getElementById("v1").value = ''
+  document.getElementById("v2").value = ''
+  document.getElementById("op").value = 'sum'
+  document.getElementById("result").value = ''
 }
