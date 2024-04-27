@@ -1,61 +1,62 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
   margin: 0;
   padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+  box-sizing: border-box;
 }
 
-#calculator {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: rgba(0, 0, 0, 0.7);
-  border-radius: 15px;
-  max-width: 320px;
-  overflow: hidden;
-  padding-bottom: 5px;
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e0e3eb;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  position: relative;
+  background-color: #ffffff;
+  max-width: 300px;
+  width: 100%;
+  padding: 10px 20px 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+}
+
+.buttons button {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  background-color: #eee;
+}
+
+.buttons button:active {
+  transform: scale(0.99);
+}
+
+.operator {
+  color: #2f9fff;
 }
 
 #display {
+  height: 80px;
   width: 100%;
-  padding: 20px;
-  font-size: 2.1rem;
-  border: none;
-  background-color: hsl(0, 0%, 25%);
-  color: white;
-}
-
-button {
-  width: 70px;
-  height: 70px;
-  border-radius: 10px;
-  border: none;
-  background-color: hsl(0, 0%, 50%);
-  color: white;
+  margin-bottom: 5px;
   font-size: 2rem;
-  font-weight: bold;
-  cursor: pointer;
-  margin: 2px;  
-}
-
-button:hover {
-  background-color: hsl(0, 0%, 25%);
-}
-
-button:active {
-  background-color: hsl(0, 0%, 60%);
-}
-
-.content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.equal {
-  height: 147px;
-}
-
-.zero {
-  width: 147px;
+  outline: none;
+  border: none;
+  text-align: end;
+  color: #000e1a;
+  pointer-events: none;
 }
